@@ -206,7 +206,7 @@ resource "aws_s3_bucket_policy" "this" {
 # CUR
 ###
 resource "aws_cur_report_definition" "this" {
-  provider = aws.eucentral1
+  provider = aws.useast1
   count    = var.create_cur ? 1 : 0
 
   # Make sure versioning and bucket policy is configured first

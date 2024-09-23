@@ -1,0 +1,60 @@
+# Working files for legacy (bash) automation
+*/work/
+work/
+
+*~
+*#
+*.swp
+*.log
+
+# Python specific
+build/
+dist/
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+/.coverage
+/.coverage.*
+/.cache
+/.pytest_cache
+/.mypy_cache
+
+# Terraform specific
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+*.tfvars
+.tftest.*
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode
+.idea/
+
+# Files that might appear in the root of a volume
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+#Local dev and testing files
+cfn-templates/parameters.local
+sandbox/

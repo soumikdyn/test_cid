@@ -2,12 +2,6 @@ data "aws_caller_identity" "this" {}
 data "aws_partition" "this" {}
 data "aws_region" "this" {}
 
-provider "aws" {
-  alias  = "eucentral1"
-  region = "eu-central-1"
-}
-
-
 ###
 # Aggregation S3 bucket
 ###

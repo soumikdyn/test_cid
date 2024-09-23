@@ -206,7 +206,7 @@ resource "aws_s3_bucket_policy" "this" {
 # CUR
 ###
 resource "aws_cur_report_definition" "this" {
-  provider = aws.eucentral1
+  provider = aws.useast1
   count    = var.create_cur ? 1 : 0
 
   # Make sure versioning and bucket policy is configured first
@@ -218,7 +218,7 @@ resource "aws_cur_report_definition" "this" {
   report_name                = "${var.resource_prefix}-${var.cur_name_suffix}"
   time_unit                  = "HOURLY"
   format                     = "Parquet"
-  compression                = "GZIP"
+  compression                = "Parquet"
   additional_schema_elements = var.enable_split_cost_allocation_data ? ["RESOURCES", "SPLIT_COST_ALLOCATION_DATA"] : ["RESOURCES"]
   s3_bucket                  = aws_s3_bucket.this.bucket
   s3_region                  = data.aws_region.this.name
